@@ -1,1 +1,1 @@
-# Atividade-sistema-de-cadastro-
+Essa atividade foi desenvolvido para atender à necessidade da empresa TechSoluções de automatizar o processo anual de avaliação de desempenho. O setor de Recursos Humanos identificou que o cálculo manual dos reajustes salariais estava gerando erros e insatisfação entre os colaboradores. Assim, foi proposto o desenvolvimento de um Módulo de Avaliação de Histórico utilizando JavaScript, com o objetivo de tornar o processo mais justo, transparente e confiável.
