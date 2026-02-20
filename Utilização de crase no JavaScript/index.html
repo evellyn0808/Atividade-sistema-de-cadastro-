@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com crase</title>
+</head>
+<body>
+    <style>
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  .resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-left: 5px solid #4CAF50;
+  }
+
+  strong {
+    color: blue;
+  }
+</style>
+
+</head>
+<body>
+
+<h2>Exemplo Prático usando Crase (`)</h2>
+
+<label>Digite seu nome:</label>
+<input type="text" id="nome"><br><br>
+
+<label>Digite sua idade:</label>
+<input type="number" id="idade"><br><br>
+
+<label>Digite seu salário:</label>
+<input type="number" id="salario"><br><br>
+
+<button onclick="gerarMensagem()">Gerar Mensagem</button>
+
+<div id="resultado" class="resultado"></div>
+
+<script>
+function gerarMensagem() {
+    // Pegando os valores digitados pelo usuário
+const nome = document.getElementById("nome").value;
+const idade = Number(document.getElementById("idade").value);
+const salario = Number(document.getElementById("salario").value);
+
+// Criando uma variável para calcular aumento de 10%
+const aumento = salario * 0.10;
+const novoSalario = salario + aumento;
+
+// Usando CRASE (`) para criar um template literal
+// Aqui usamos:
+// - ${} para inserir variáveis
+// - Expressões matemáticas dentro da string
+// - Texto em múltiplas linhas
+
+const mensagem = `
+👤 Nome: <strong>${nome}</strong> <br>
+🎂 Idade: <strong>${idade}</strong> anos <br>
+💰 Salário atual: <strong>R$ ${salario.toFixed(2)}</strong> <br><br>
+
+📈 Cálculo do aumento:<br>
+10% de R$ ${salario.toFixed(2)} é <strong>R$ ${aumento.toFixed(2)}</strong> <br><br>
+
+🆕 Novo salário: <strong>R$ ${novoSalario.toFixed(2)}</strong>
+`;
+
+// Exibindo a mensagem na tela
+document.getElementById("resultado").innerHTML = mensagem;
+}
+</script>
+</body>
+</html>
